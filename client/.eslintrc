@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2023,
     "sourceType": "module",
@@ -25,5 +25,6 @@
     "object-curly-newline": "off",
     "linebreak-style": "off",
     "no-param-reassign": "off"
-  }
+  },
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }
