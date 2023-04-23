@@ -1,7 +1,8 @@
 {
-  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "airbnb/hooks", "plugin:prettier/recommended"],
+  "plugins": ["react", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2023,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -12,19 +13,29 @@
     "node": true,
     "es6": true
   },
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["import", "react-hooks"],
   "rules": {
-    "jsx-a11y/label-has-associated-control": "off",
-    "jsx-a11y/anchor-is-valid": "off",
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
     "no-console": "off",
-    "no-underscore-dangle": "off",
-    "react/forbid-prop-types": "off",
-    "react/jsx-filename-extension": "off",
-    "react/jsx-one-expression-per-line": "off",
-    "object-curly-newline": "off",
-    "linebreak-style": "off",
-    "no-param-reassign": "off"
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": false,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
   },
-  "eslint.workingDirectories": ["./"]
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
 }

@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "target": "ESNext",
-    "moduleResolution": "nodeNext"
+    "baseUrl": "src",
+    "module": "commonjs",
+    "target": "es2016",
+    "jsx": "react"
   },
-  "include": ["src/**/*"]
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": ["src"]
 }
