@@ -1,12 +1,26 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import {
+  HomePage,
+  ProfilePage,
+  NetworkPage,
+  RegisterPage,
+  LoginPage,
+} from './pages';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <div>App</div>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/network" element={<NetworkPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
-}
+};
 
 export default App;

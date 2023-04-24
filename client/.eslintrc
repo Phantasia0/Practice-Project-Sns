@@ -14,7 +14,6 @@
     "es6": true
   },
   "rules": {
-    "prettier/prettier": "error",
     "no-unused-vars": "warn",
     "no-console": "off",
     "func-names": "off",
@@ -28,6 +27,24 @@
         "devDependencies": false,
         "optionalDependencies": false,
         "peerDependencies": false
+      }
+    ],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+
+    "react/function-component-definition": [
+      "off",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-props-no-spreading": [
+      "off",
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore",
+        "exceptions": "ignore"
       }
     ]
   },
